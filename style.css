@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', 'sans-serif';
+}
+
+:root {
+    --background-color: #141c24;
+    --secondary-color: #2d3748;
+    --text-color: #ffffff; 
+    --secodary-text-color: #434445;
+    --accent-color: #4a5568; 
+    --highlight-color: #1a202c; 
+
+    --btn-add-color: rgb(51, 214, 51);
+    --btn-add-hover-color: rgb(42, 161, 42);
+    --btn-cancel-color: rgb(247, 40, 40);
+    --btn-cancel-hover-color: rgb(161, 19, 19);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    flex: 1;
+}
+
+header {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: flex-start; 
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom-left-radius: 50px; 
+    border-bottom-right-radius: 50px;
+}
+
+header img {
+    width: 60px; 
+    height: auto; 
+    margin-right: 20px; 
+}
+
+h1 {
+    flex-grow: 1; 
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+form input,
+form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#inputTask:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#btnAdd {
+    background-color: var(--btn-add-color);
+    cursor: pointer;
+}
+
+#btnAdd:hover {
+    background-color: var(--btn-add-hover-color);
+    transition: all ease 0.3s;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul p {
+    width: 300px;
+    color: var(--text-color);
+    background-color: var(--secodary-text-color);
+    font-size: 20px;
+    font-weight: 600;
+    border: solid 1px #1a202c;
+    padding: 5px 10px;
+}
+
+
+
+ul li p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li p button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+.check {
+    display: flex;
+    position: relative;
+    color: var(--btn-add-color);
+    left: 30px;
+}
+
+.check:hover {
+    color: var(--btn-add-hover-color);
+    transition: all ease 0.3s;
+}
+
+.trash {
+    color: var(--btn-cancel-color);
+}
+
+.trash:hover {
+    cursor: pointer;
+    color: var(--btn-cancel-hover-color);
+    transition: all ease 0.3s;
+}
+
+.item.completed p {
+    text-decoration: line-through;
+    color: var(--btn-add-hover-color);
+}
+
+/* 0px - 480px = smartphones */
+@media (max-width: 480px) {
+    /* Adicione regras específicas para telas pequenas, se necessário */
+}
